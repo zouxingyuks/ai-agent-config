@@ -26,7 +26,11 @@
     // 支持 glob 通配符（* 和 ?）。与内置默认列表合并（并集叠加，非替换）：
     //   task, skill, todowrite, todoread, compress, batch, plan_enter, plan_exit, write, edit
     "protectedTools": [
-      "sequential-thinking"
+      "sequential-thinking",
+      "background_output",
+      "task_*",
+      "memory_*",
+      "session_*"
     ]
   },
 
@@ -118,7 +122,11 @@
     // 而不是被裁剪。支持 glob 通配符：* 匹配任意字符，? 匹配单个字符。
     // 与内置默认列表合并（并集叠加）：task, skill, todowrite, todoread, compress, batch 等
     "protectedTools": [
-      "sequential-thinking"
+      "sequential-thinking",
+      "background_output",
+      "task_*",
+      "memory_*",
+      "session_*"
     ],
 
     // 为 true 时，用户消息在压缩过程中永远不会丢失 ——
@@ -149,7 +157,7 @@
       // 等待多少轮之后裁剪出错工具的输入（默认: 3）
       "turns": 4,
       // 额外保护不被错误清理的工具（支持 glob 通配符）
-      "protectedTools": []
+      "protectedTools": ["background_output"]
     }
   }
 }

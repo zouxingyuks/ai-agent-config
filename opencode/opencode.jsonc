@@ -328,7 +328,9 @@
         "serena",
         "start-mcp-server",
         "--context",
-        "ide"
+        "ide",
+        "--open-web-dashboard",
+        "false"
       ]
     },
     "sequential-thinking": {
@@ -361,18 +363,29 @@
     "memory": {
       "type": "local",
       "enabled": true,
-      "command":[
+      "command": [
         "npx",
         "-y",
         "@modelcontextprotocol/server-memory"
       ]
+    },
+    "deepwiki": {
+      "type": "remote",
+      "enabled": true,
+      "url": "https://mcp.deepwiki.com/mcp"
+    },
+    "gh_grep": {
+      "type": "remote",
+      "enabled": true,
+      "url": "https://mcp.grep.app"
     }
   },
   "plugin": [
     "oh-my-opencode",
     "opencode-axonhub-tracing@1.1.0",
     "@franlol/opencode-md-table-formatter@0.0.6",
-    "@tarquinen/opencode-dcp@2.1.8"
+    "@tarquinen/opencode-dcp@latest",
+    "opencode-scheduler"
   ],
   "share": "disabled",
   "watcher": {
@@ -395,7 +408,7 @@
     // "*": "ask",
     // base tools.
     "bash": {
-      "*": "ask",
+      // "*": "ask",
       "grep *": "allow",
       "tail *": "allow",
       "ls *": "allow",
@@ -446,7 +459,6 @@
       "npm list *": "allow",
       "npx *": "allow",
       "bunx *": "allow",
-      "make *": "allow",
       "python *": "allow",
       "pip list *": "allow",
       // 改动类操作需确认
@@ -544,6 +556,7 @@
       ".git/config": "deny",
       "*id_rsa*": "deny",
       "*id_ed25519*": "deny",
+      "credentials/*": "deny",
       "*/.ssh/*": "deny",
       "*/.gnupg/*": "deny",
       "credentials/*": "deny",
@@ -558,6 +571,8 @@
     "context7_*": "allow",
     "exa_*": "allow",
     "sequential-thinking_*": "allow",
+    "deepwiki_*": "allow",
+    "gh_grep_*": "allow",
     "websearch": "allow",
     "web-reader_*": "allow",
     // dcp related tools.
@@ -566,7 +581,8 @@
     "prune": "allow",
     // external dir.
     "external_directory": {
-      "*": "ask"
+      "*": "ask",
+      "/tmp/*": "allow"
     }
   }
 }

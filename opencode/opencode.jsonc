@@ -1,0 +1,572 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "anthropic": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "anthropic",
+      "options": {
+        "baseURL": "{env:ANTHROPIC_BASE_URL}/v1",
+        "apiKey": "{env:ANTHROPIC_AUTH_TOKEN}",
+        "disableMaxOutputTokens": true,
+        "setCacheKey": true
+      },
+      "whitelist": [
+        "claude-sonnet-4-6",
+        "claude-opus-4-6",
+        "claude-haiku-4-5"
+      ],
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6",
+          "attachment": false,
+          "limit": {
+            "context": 200000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 16000
+            }
+          },
+          "variants": {
+            "low": {
+              "effort": "low"
+            },
+            "medium": {
+              "effort": "high"
+            },
+            "high": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 32000
+              }
+            },
+            "xhigh": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 128000
+              },
+              "speed": "fast"
+            }
+          }
+        },
+        "claude-sonnet-4-6": {
+          "name": "claude-sonnet-4-6",
+          "attachment": false,
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 16000
+            }
+          },
+          "variants": {
+            "low": {
+              "effort": "low"
+            },
+            "medium": {
+              "effort": "high"
+            },
+            "high": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 16000
+              }
+            },
+            "xhigh": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 64000
+              }
+            }
+          }
+        },
+        "claude-haiku-4-5": {
+          "name": "claude-haiku-4-5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "effort": "low"
+            },
+            "medium": {
+              "effort": "high"
+            },
+            "high": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 8000
+              }
+            },
+            "xhigh": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 16000
+              }
+            }
+          }
+        }
+      }
+    },
+    "openai": {
+      "name": "openai",
+      "npm": "@ai-sdk/openai",
+      "api": "responses",
+      "options": {
+        "baseURL": "{env:OPENAI_BASE_URL}",
+        "apiKey": "{env:OPENAI_AUTH_TOKEN}",
+        "disableMaxOutputTokens": true,
+        "truncation": "auto"
+      },
+      "whitelist": [
+        "gpt-5.2",
+        "gpt-5.4",
+        "gpt-5.3-codex",
+        "gpt-5.3-codex-spark"
+      ],
+      "models": {
+        "gpt-5.2": {
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "name": "gpt-5.2",
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "high": {
+              "reasoningEffort": "high",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "low": {
+              "reasoningEffort": "low",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            }
+          }
+        },
+        "gpt-5.4": {
+          "limit": {
+            "context": 1050000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "name": "gpt-5.4",
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "high": {
+              "reasoningEffort": "high",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "low": {
+              "reasoningEffort": "low",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            }
+          }
+        },
+        "gpt-5.3-codex": {
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "name": "gpt-5.3-codex",
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "options": {
+            "include": [
+              "reasoning.encrypted_content"
+            ],
+            "store": false
+          },
+          "variants": {
+            "high": {
+              "reasoningEffort": "high",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "low": {
+              "reasoningEffort": "low",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            }
+          }
+        },
+        "gpt-5.3-codex-spark": {
+          "name": "gpt-5.3-codex-spark",
+          "limit": {
+            "context": 128000,
+            "output": 32000
+          },
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        }
+      }
+    }
+  },
+  "agent": {
+    "build": {
+      "options": {
+        "store": false
+      }
+    },
+    "plan": {
+      "options": {
+        "store": false
+      }
+    }
+  },
+  "compaction": {
+    "auto": false,
+    "prune": false
+  },
+  "mcp": {
+    "serena": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "uvx",
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide"
+      ]
+    },
+    "sequential-thinking": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "exa": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "exa-mcp-server"
+      ]
+    },
+    "context7": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "memory": {
+      "type": "local",
+      "enabled": true,
+      "command":[
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    }
+  },
+  "plugin": [
+    "oh-my-opencode",
+    "opencode-axonhub-tracing@1.1.0",
+    "@franlol/opencode-md-table-formatter@0.0.6",
+    "@tarquinen/opencode-dcp@2.1.8"
+  ],
+  "share": "disabled",
+  "watcher": {
+    "ignore": [
+      "node_modules/**",
+      "dist/**",
+      ".git/**",
+      "*.log"
+    ]
+  },
+  "autoupdate": "notify",
+  "logLevel": "INFO",
+  "username": "xyuzou",
+  "enabled_providers": [
+    "openai",
+    "anthropic"
+  ],
+  "small_model": "openai/gpt-5.3-codex-spark",
+  "permission": {
+    // "*": "ask",
+    // base tools.
+    "bash": {
+      "*": "ask",
+      "grep *": "allow",
+      "tail *": "allow",
+      "ls *": "allow",
+      "rg *": "allow",
+      "sed *": "allow",
+      "find *": "allow",
+      "sort *": "allow",
+      "gogmt *": "allow",
+      "go *": "allow",
+      "pnpm run *": "allow",
+      "cat *": "allow",
+      "head *": "allow",
+      "echo *": "allow",
+      "git *": "allow",
+      // 高危 Git 操作门禁
+      "git push *": "ask",
+      "git push --force *": "deny",
+      "git push -f *": "deny",
+      "git reset --hard *": "ask",
+      "git clean -fd *": "ask",
+      "git clean -fdx *": "deny",
+      "git branch -D *": "ask",
+      "git rebase *": "ask",
+      "git cherry-pick *": "ask",
+      "git commit --amend *": "ask",
+      "mkdir *": "allow",
+      "tee *": "allow",
+      "wc *": "allow",
+      "opsx *": "allow",
+      "openspec *": "allow",
+      "gh search code *": "allow",
+      "gh search repos *": "allow",
+      "gh pr view *": "allow",
+      "gh pr diff *": "allow",
+      "gh repo clone *": "allow",
+      "gh repo view *": "allow",
+      "pwd": "allow",
+      "diff *": "allow",
+      "curl *": "allow",
+      "jq *": "allow",
+      "helm *": "allow",
+      "kubectl get *": "allow",
+      "kubectl describe *": "allow",
+      "kubectl logs *": "allow",
+      "docker ps *": "allow",
+      "docker logs *": "allow",
+      "docker images *": "allow",
+      "npm list *": "allow",
+      "npx *": "allow",
+      "bunx *": "allow",
+      "make *": "allow",
+      "python *": "allow",
+      "pip list *": "allow",
+      // 改动类操作需确认
+      "cp *": "ask",
+      "mv *": "ask",
+      "docker run *": "ask",
+      "docker exec *": "ask",
+      // docker 破坏性操作
+      "docker rm *": "ask",
+      "docker rmi *": "ask",
+      "docker stop *": "ask",
+      "docker kill *": "ask",
+      "docker system prune *": "deny",
+      "docker volume rm *": "ask",
+      "docker network rm *": "ask",
+      "kubectl apply *": "ask",
+      "kubectl delete *": "ask",
+      "kubectl exec *": "ask",
+      "kubectl edit *": "ask",
+      "kubectl patch *": "ask",
+      "kubectl scale *": "ask",
+      "kubectl drain *": "deny",
+      "kubectl cordon *": "ask",
+      "helm install *": "ask",
+      "helm upgrade *": "ask",
+      "helm uninstall *": "ask",
+      "helm delete *": "ask",
+      "helm rollback *": "ask",
+      "npm install *": "ask",
+      "npm uninstall *": "ask",
+      "npm publish *": "deny",
+      "npm link *": "ask",
+      "pip install *": "ask",
+      "pip uninstall *": "ask",
+      "pnpm add *": "ask",
+      "pnpm remove *": "ask",
+      "rm -rf *": "deny",
+      "rm -r *": "ask",
+      "rm *": "ask",
+      "rmdir *": "ask",
+      "sudo *": "ask",
+      "sudo rm *": "deny",
+      "sudo chmod *": "ask",
+      "sudo chown *": "ask",
+      "sudo systemctl *": "ask",
+      "sudo apt *": "ask",
+      "chmod *": "ask",
+      "chown *": "ask",
+      "dpkg *": "allow",
+      "php *": "allow"
+    },
+    "skill": "allow",
+    "write": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.key": "deny",
+      "*.pem": "deny",
+      "*.p12": "deny",
+      "*/.ssh/*": "deny",
+      "credentials/*": "deny",
+      "*/secrets/*": "deny"
+    },
+    "edit": {
+      "*": "allow",
+      "Makefile": "ask",
+      ".github/**": "ask",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.key": "deny",
+      "*.pem": "deny",
+      "*.p12": "deny",
+      "*/.ssh/*": "deny",
+      "credentials/*": "deny",
+      "*/secrets/*": "deny"
+    },
+    "glob": "allow",
+    "grep": "allow",
+    "fetch": "allow",
+    "webfetch": "allow",
+    "task": "allow",
+    "batch": "allow",
+    "lsp": "allow",
+    "lsp_rename": "ask",
+    "diagnostic": "allow",
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.key": "deny",
+      "*.pem": "deny",
+      "*.secret": "deny",
+      "*.p12": "deny",
+      "*.pfx": "deny",
+      ".git/config": "deny",
+      "*id_rsa*": "deny",
+      "*id_ed25519*": "deny",
+      "*/.ssh/*": "deny",
+      "*/.gnupg/*": "deny",
+      "credentials/*": "deny",
+      "*/secrets/*": "deny",
+      "*secret*key*": "deny",
+      "*kubeconfig*": "deny"
+    },
+    "todoread": "allow",
+    "todowrite": "allow",
+    // mcp.
+    "serena_*": "allow",
+    "context7_*": "allow",
+    "exa_*": "allow",
+    "sequential-thinking_*": "allow",
+    "websearch": "allow",
+    "web-reader_*": "allow",
+    // dcp related tools.
+    "compress": "allow",
+    "distill": "allow",
+    "prune": "allow",
+    // external dir.
+    "external_directory": {
+      "*": "ask"
+    }
+  }
+}

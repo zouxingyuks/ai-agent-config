@@ -384,7 +384,7 @@
     "oh-my-opencode",
     "opencode-axonhub-tracing@1.1.0",
     "@franlol/opencode-md-table-formatter@0.0.6",
-    "@tarquinen/opencode-dcp",
+    "@tarquinen/opencode-dcp@latest",
     "opencode-scheduler"
   ],
   "share": "disabled",

@@ -582,7 +582,8 @@
     // external dir.
     "external_directory": {
       "*": "ask",
-      "/tmp/*": "allow"
+      "/tmp/*": "allow",
+      "~//.config/opencode/AGENTS.md": "allow"
     }
   }
 }

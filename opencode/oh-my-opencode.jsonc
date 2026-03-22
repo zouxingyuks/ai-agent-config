@@ -19,7 +19,7 @@
       "model": "anthropic/claude-opus-4-6",
       "fallback_models": ["openai/gpt-5.4", "openai/gpt-5.2"],
       "temperature": 0.1,
-      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
+      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md\n仅做当前阶段所必需的最小修改，禁止无关改动、顺手重构和范围扩散。\n任务必须分阶段执行，每次只完成一个清晰、可验证的阶段目标。\n每个阶段完成后，必须先提交一个最小、完整、自洽的 commit，再进入下一阶段。\n禁止将多个阶段合并到同一个 commit 中。"
     },
     "prometheus": {
       // 战略规划：澄清需求、验证计划、复杂任务分解，推荐内部plan而不是和用户直接交互

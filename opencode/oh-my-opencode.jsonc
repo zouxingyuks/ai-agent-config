@@ -129,8 +129,8 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "quick": {
-      // 快速小活：spark → gpt-5.4 → haiku
-      "model": "openai/gpt-5.3-codex-spark",
+      // 快速小活：gpt-5.4-mini → gpt-5.4 → haiku
+      "model": "openai/gpt-5.4-mini",
       "fallback_models": ["openai/gpt-5.4", "anthropic/claude-haiku-4-5"],
       "temperature": 0.1,
       "description": "Trivial tasks, single-file changes, typo fixes, simple modifications",
@@ -169,11 +169,10 @@
   },
   "background_task": {
     "defaultConcurrency": 20,
-    "staleTimeoutMs": 180000,
+    "staleTimeoutMs": 1200000,
     "providerConcurrency": {
       "anthropic": 10,
-      "openai": 15,
-      "google": 5
+      "openai": 15
     },
     "modelConcurrency": {
       "anthropic/claude-opus-4-6": 10,

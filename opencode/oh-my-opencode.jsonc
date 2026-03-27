@@ -6,57 +6,79 @@
     // ======================
     "sisyphus": {
       // 主编排器：委托任务编排分配、TODO、后台并行、动态组合技能，调用subagent
-      // fallback：gpt-5.4 → gpt-5.3-codex → claude-opus-4-6
+      // fallback：gpt-5.4 → gpt-5.3-codex
       "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex", "anthropic/claude-opus-4-6"],
+      "variant": "medium",
+      "fallback_models": [
+        "openai/gpt-5.3-codex"
+      ],
       "temperature": 0.1,
       // 追加提示词：显式加载全局 AGENTS.md
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "atlas": {
       // 高级编排器：全生命周期管理，任务路由，基于skills调度，全局会话级别的编排器，一般由内部逻辑/hook唤起
-      // fallback：gpt-5.4 → gpt-5.3-codex → claude-sonnet-4-6
+      // fallback：gpt-5.4 → gpt-5.2
       "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex", "anthropic/claude-sonnet-4-6"],
+      "variant": "medium",
+      "fallback_models": [
+        "openai/gpt-5.2"
+      ],
       "temperature": 0.1,
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md\n仅做当前阶段所必需的最小修改，禁止无关改动、顺手重构和范围扩散。\n任务必须分阶段执行，每次只完成一个清晰、可验证的阶段目标。\n每个阶段完成后，必须先提交一个最小、完整、自洽的 commit，再进入下一阶段。\n禁止将多个阶段合并到同一个 commit 中。"
     },
     "prometheus": {
       // 战略规划：澄清需求、验证计划、复杂任务分解，推荐内部plan而不是和用户直接交互
-      // fallback：gpt-5.4 → gpt-5.3-codex → claude-opus-4-6
+      // fallback：gpt-5.4 → gpt-5.2
       "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex", "anthropic/claude-opus-4-6"],
-      "variant": "medium",
-      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md",
-      "temperature": 0.1
+      "variant": "high",
+      "fallback_models": [
+        "openai/gpt-5.2"
+      ],
+      "temperature": 0.1,
+      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "metis": {
       // 预分析规划顾问：正式plan/执行前进行问题理解、风险与上下文分析，温度略高，探索更多方案
-      // fallback：gpt-5.4 → gpt-5.3-codex → claude-opus-4-6
+      // fallback：gpt-5.4 → gpt-5.2
       "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex", "anthropic/claude-opus-4-6"],
+      "variant": "high",
+      "fallback_models": [
+        "openai/gpt-5.2"
+      ],
       "temperature": 0.3,
-      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md",
-      "variant": "medium"
+      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "momus": {
       // 计划与结果验证：对计划/方案进行合理性检查和评审
-      // fallback：gpt-5.3-codex → claude-opus-4-6
+      // fallback：gpt-5.4 → claude-opus-4-6
       "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex", "anthropic/claude-opus-4-6"],
-      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md",
-      "temperature": 0.1
+      "variant": "xhigh",
+      "fallback_models": [
+        "anthropic/claude-opus-4-6"
+      ],
+      "temperature": 0.1,
+      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
+    },
+    "sisyphus-junior": {
+      // 子编排器：由 sisyphus 委托的轻量执行代理，执行分类任务
+      "model": "openai/gpt-5.4",
+      "variant": "medium",
+      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     // ======================
     // 2. 执行系
     // ======================
     "hephaestus": {
       // 深度自主工作专用，长周期，深度任务
-      // v3.14.0: 官方默认从 gpt-5.3-codex 升级为 gpt-5.4 (medium only, no fallback)
+      // fallback：gpt-5.4 → gpt-5.3-codex → claude-opus-4-6
       "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex"],
-      "temperature": 0.1,
       "variant": "medium",
+      "fallback_models": [
+        "openai/gpt-5.3-codex",
+        "anthropic/claude-opus-4-6"
+      ],
+      "temperature": 0.1,
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     // ======================
@@ -75,7 +97,11 @@
       // 文档检索：外部文档、库文档搜索
       // fallback：gpt-5.4 → gpt-5.3-codex-spark → claude-haiku-4-5
       "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex-spark", "anthropic/claude-haiku-4-5"],
+      "variant": "medium",
+      "fallback_models": [
+        "openai/gpt-5.3-codex-spark",
+        "anthropic/claude-haiku-4-5"
+      ],
       "temperature": 0.1,
       "permission": {
         "edit": "deny",
@@ -99,39 +125,54 @@
       // 多模态分析：图片、PDF等
       // fallback：gpt-5.3-codex → claude-sonnet-4-6
       "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex", "anthropic/claude-sonnet-4-6"],
+      "variant": "medium",
+      "fallback_models": [
+        "anthropic/claude-sonnet-4-6"
+      ],
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     }
   },
   "categories": {
     "visual-engineering": {
-      // 视觉/前端/GUI：codex → opus → gpt-5.4
-      "model": "openai/gpt-5.3-codex",
-      "fallback_models": ["anthropic/claude-opus-4-6", "openai/gpt-5.4"],
-      "variant": "medium",
+      // 视觉/前端/GUI：gpt-5.4 → opus → gpt-5.4
+      "model": "openai/gpt-5.4",
+      "variant": "high",
+      "fallback_models": [
+        "anthropic/claude-opus-4-6",
+        "openai/gpt-5.4"
+      ],
       "description": "Frontend, UI/UX, design, styling, animations, layout work",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "ultrabrain": {
       // 超大脑：gpt-5.4 → codex → opus
       "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex", "anthropic/claude-opus-4-6"],
       "variant": "xhigh",
+      "fallback_models": [
+        "openai/gpt-5.3-codex",
+        "anthropic/claude-opus-4-6"
+      ],
       "description": "Complex logic, architecture decisions, algorithms, deep reasoning",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "deep": {
       // 深度执行：codex → gpt-5.4 → opus
       "model": "openai/gpt-5.3-codex",
-      "fallback_models": ["openai/gpt-5.4", "anthropic/claude-opus-4-6"],
       "variant": "medium",
+      "fallback_models": [
+        "openai/gpt-5.4",
+        "anthropic/claude-opus-4-6"
+      ],
       "description": "Autonomous problem-solving, thorough research, end-to-end implementation",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "quick": {
       // 快速小活：gpt-5.4-mini → gpt-5.4 → haiku
       "model": "openai/gpt-5.4-mini",
-      "fallback_models": ["openai/gpt-5.4", "anthropic/claude-haiku-4-5"],
+      "fallback_models": [
+        "openai/gpt-5.4",
+        "anthropic/claude-haiku-4-5"
+      ],
       "temperature": 0.1,
       "description": "Trivial tasks, single-file changes, typo fixes, simple modifications",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
@@ -139,23 +180,45 @@
     "writing": {
       // 文本/写作：gpt-5.4 → sonnet → gpt-5.4
       "model": "openai/gpt-5.4",
-      "fallback_models": ["anthropic/claude-sonnet-4-6", "openai/gpt-5.4"],
+      "variant": "medium",
+      "fallback_models": [
+        "anthropic/claude-sonnet-4-6",
+        "openai/gpt-5.4"
+      ],
       "temperature": 0.5,
       "description": "Documentation, prose, technical writing, creative content",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     // 未指定低/高档位
     "unspecified-low": {
-      "model": "openai/gpt-5.4",
-      "fallback_models": ["anthropic/claude-sonnet-4-6", "openai/gpt-5.3-codex"],
+      "model": "openai/gpt-5.3-codex",
+      "variant": "medium",
+      "fallback_models": [
+        "anthropic/claude-sonnet-4-6",
+        "openai/gpt-5.3-codex"
+      ],
       "description": "General tasks, low to moderate effort",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "unspecified-high": {
-      "model": "openai/gpt-5.4",
-      "fallback_models": ["openai/gpt-5.3-codex", "anthropic/claude-opus-4-6"],
-      "variant": "xhigh",
+      "model": "openai/gpt-5.3-codex",
+      "variant": "medium",
+      "fallback_models": [
+        "anthropic/claude-opus-4-6",
+        "openai/gpt-5.3-codex"
+      ],
       "description": "General tasks, high effort and complexity",
+      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
+    },
+    "artistry": {
+      // 创意解法：非常规思路解决复杂问题
+      "model": "openai/gpt-5.4",
+      "variant": "xhigh",
+      "fallback_models": [
+        "anthropic/claude-opus-4-6",
+        "openai/gpt-5.3-codex"
+      ],
+      "description": "Complex problem-solving with unconventional, creative approaches - beyond standard patterns",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     }
   },
@@ -177,6 +240,7 @@
     "modelConcurrency": {
       "anthropic/claude-opus-4-6": 10,
       "openai/gpt-5.4": 10,
+      "openai/gpt-5.4-mini": 20,
       "openai/gpt-5.3-codex": 20
     }
   },
@@ -185,7 +249,12 @@
   ],
   "runtime_fallback": {
     "enabled": true,
-    "retry_on_errors": [400, 429, 503, 529],
+    "retry_on_errors": [
+      400,
+      429,
+      503,
+      529
+    ],
     "max_fallback_attempts": 3,
     "cooldown_seconds": 60,
     "timeout_seconds": 30,

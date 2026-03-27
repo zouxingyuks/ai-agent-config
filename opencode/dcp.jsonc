@@ -77,12 +77,15 @@
     "permission": "allow",
 
     // 压缩模式：
-    //   "range"   — 按范围压缩，将一段消息范围合并为摘要（默认）
-    //   "message" — 按消息压缩（实验性），对单条消息逐条压缩
+    //   "range"   — 以消息区间为单位压缩（稳定默认）
+    //   "message" — 以单条消息为单位压缩（较新模式）
     "mode": "range",
 
     // 在裁剪通知中包含压缩摘要（默认: true）
     "showCompression": false,
+
+    // 在压缩后保留一段摘要缓冲，降低上下文骤降带来的不连续感
+    "summaryBuffer": true,
 
     // 软上限阈值 —— 当上下文使用量超过此值时，DCP 会在系统提示中注入强烈的压缩提醒。
     // 接受绝对 token 数（数字）或模型上下文窗口的百分比（"X%"）。（默认: "70%"）
@@ -92,10 +95,6 @@
     // 格式同 maxContextLimit。（默认: "20%"）
     "minContextLimit": "30%",
 
-    // 摘要缓冲区 —— 为 true 时，活跃压缩摘要的 token 可超出 maxContextLimit，
-    // 有效扩展上下文容量以容纳摘要内容。（默认: true）
-    "summaryBuffer": true,
-
     // 按模型单独覆盖 maxContextLimit，键为精确的 "provider/model" 字符串。
     // 适用于不同模型有不同上下文窗口大小或成本考量的情况。
     "modelMaxLimits": {
@@ -104,7 +103,9 @@
       "anthropic/claude-haiku-4-5": "65%",
       "openai/gpt-5.2": "65%",
       "openai/gpt-5.3-codex": "65%",
-      "openai/gpt-5.4": 180000
+      "openai/gpt-5.3-codex-spark": "65%",
+      "openai/gpt-5.4": "65%",
+      "openai/gpt-5.4-mini": "65%"
     },
 
     // 按模型单独覆盖 minContextLimit（键格式同 modelMaxLimits）
@@ -147,12 +148,6 @@
       "enabled": true,
       // 额外保护不被去重裁剪的工具（支持 glob 通配符）
       "protectedTools": []
-    },
-
-    // 写入覆盖 —— 当被写入的文件随后被读取时，裁剪 write 工具的输入，
-    // 因为写入内容已被读取结果所取代，变得冗余
-    "supersedeWrites": {
-      "enabled": true
     },
 
     // 错误清理 —— 在 N 轮之后裁剪返回错误的工具输入，

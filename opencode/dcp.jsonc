@@ -76,6 +76,11 @@
     //   "deny"  — 工具不注册，完全禁用
     "permission": "allow",
 
+    // 压缩模式：
+    //   "range"   — 按范围压缩，将一段消息范围合并为摘要（默认）
+    //   "message" — 按消息压缩（实验性），对单条消息逐条压缩
+    "mode": "range",
+
     // 在裁剪通知中包含压缩摘要（默认: true）
     "showCompression": false,
 
@@ -86,6 +91,10 @@
     // 软下限阈值 —— 当上下文使用量低于此值时，压缩提醒被抑制。
     // 格式同 maxContextLimit。（默认: "20%"）
     "minContextLimit": "30%",
+
+    // 摘要缓冲区 —— 为 true 时，活跃压缩摘要的 token 可超出 maxContextLimit，
+    // 有效扩展上下文容量以容纳摘要内容。（默认: true）
+    "summaryBuffer": true,
 
     // 按模型单独覆盖 maxContextLimit，键为精确的 "provider/model" 字符串。
     // 适用于不同模型有不同上下文窗口大小或成本考量的情况。
@@ -113,10 +122,6 @@
     //   "strong" — 更积极地触发压缩（默认）
     //   "soft"   — 温和提醒，压缩可能性更低
     "nudgeForce": "strong",
-
-    // 工具 schema 形状：false = 嵌套的 content 对象（默认），true = 4 个扁平字符串参数。
-    // 扁平 schema 可能改善与某些模型的兼容性。
-    "flatSchema": false,
 
     // 需要保护的工具名 —— 这些工具的已完成输出将被保留（附加到压缩摘要中）
     // 而不是被裁剪。支持 glob 通配符：* 匹配任意字符，? 匹配单个字符。

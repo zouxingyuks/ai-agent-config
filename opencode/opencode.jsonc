@@ -154,6 +154,7 @@
       "whitelist": [
         "gpt-5.2",
         "gpt-5.4",
+        "gpt-5.4-mini",
         "gpt-5.3-codex",
         "gpt-5.3-codex-spark"
       ],
@@ -287,6 +288,37 @@
             }
           }
         },
+        "gpt-5.4-mini": {
+          "name": "gpt-5.4-mini",
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "low": {
+              "reasoningEffort": "low",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            }
+          }
+        },
         "gpt-5.3-codex-spark": {
           "name": "gpt-5.3-codex-spark",
           "limit": {
@@ -381,7 +413,7 @@
     }
   },
   "plugin": [
-    "oh-my-opencode",
+    "oh-my-openagent",
     "opencode-axonhub-tracing@1.1.0",
     "@franlol/opencode-md-table-formatter@0.0.6",
     "@tarquinen/opencode-dcp@latest"

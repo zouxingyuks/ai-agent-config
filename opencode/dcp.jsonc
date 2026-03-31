@@ -104,7 +104,7 @@
       "anthropic/claude-haiku-4-5": "65%",
       "openai/gpt-5.2": "65%",
       "openai/gpt-5.3-codex": "65%",
-      "openai/gpt-5.4": "65%"
+      "openai/gpt-5.4": 180000
     },
 
     // 按模型单独覆盖 minContextLimit（键格式同 modelMaxLimits）

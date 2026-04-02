@@ -12,7 +12,6 @@
       "fallback_models": [
         "openai/gpt-5.3-codex"
       ],
-      "temperature": 0.1,
       // 追加提示词：显式加载全局 AGENTS.md
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -24,7 +23,6 @@
       "fallback_models": [
         "openai/gpt-5.2"
       ],
-      "temperature": 0.1,
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md\n仅做当前阶段所必需的最小修改，禁止无关改动、顺手重构和范围扩散。\n任务必须分阶段执行，每次只完成一个清晰、可验证的阶段目标。\n每个阶段完成后，必须先提交一个最小、完整、自洽的 commit，再进入下一阶段。\n禁止将多个阶段合并到同一个 commit 中。"
     },
     "prometheus": {
@@ -35,7 +33,6 @@
       "fallback_models": [
         "openai/gpt-5.2"
       ],
-      "temperature": 0.1,
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "metis": {
@@ -46,7 +43,6 @@
       "fallback_models": [
         "openai/gpt-5.2"
       ],
-      "temperature": 0.3,
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "momus": {
@@ -57,7 +53,6 @@
       "fallback_models": [
         "anthropic/claude-opus-4-6"
       ],
-      "temperature": 0.1,
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "sisyphus-junior": {
@@ -78,7 +73,6 @@
         "openai/gpt-5.3-codex",
         "anthropic/claude-opus-4-6"
       ],
-      "temperature": 0.1,
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     // ======================
@@ -89,7 +83,6 @@
       // fallback：gpt-5.3-codex → claude-opus-4-6
       "model": "openai/gpt-5.4",
       "fallback_models": ["openai/gpt-5.3-codex", "anthropic/claude-opus-4-6"],
-      "temperature": 0.1,
       "variant": "high",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -102,7 +95,6 @@
         "openai/gpt-5.3-codex-spark",
         "anthropic/claude-haiku-4-5"
       ],
-      "temperature": 0.1,
       "permission": {
         "edit": "deny",
         "bash": "deny"
@@ -114,7 +106,6 @@
       // fallback：gpt-5.4-mini → gpt-5.3-codex-spark → claude-haiku-4-5
       "model": "openai/gpt-5.4-mini",
       "fallback_models": ["openai/gpt-5.3-codex-spark", "anthropic/claude-haiku-4-5"],
-      "temperature": 0.1,
       "permission": {
         "edit": "deny",
         "bash": "deny"
@@ -173,7 +164,6 @@
         "openai/gpt-5.4",
         "anthropic/claude-haiku-4-5"
       ],
-      "temperature": 0.1,
       "description": "Trivial tasks, single-file changes, typo fixes, simple modifications",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -185,7 +175,6 @@
         "anthropic/claude-sonnet-4-6",
         "openai/gpt-5.4"
       ],
-      "temperature": 0.5,
       "description": "Documentation, prose, technical writing, creative content",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -233,10 +222,6 @@
   "background_task": {
     "defaultConcurrency": 20,
     "staleTimeoutMs": 1200000,
-    "providerConcurrency": {
-      "anthropic": 10,
-      "openai": 15
-    },
     "modelConcurrency": {
       "anthropic/claude-opus-4-6": 10,
       "openai/gpt-5.4": 10,

@@ -1,5 +1,6 @@
 |IMPORTANT: Prefer retrieval-led reasoning over pre-training-led reasoning
 
+|Must use: sequential-thinking in all time.
 |Core Tools: always use this tools|serena (semantic code ops)|context7 (3rd-party docs)|sequential-thinking (decisions)
 |Language Policy:Chinese for main|English for proper nouns and notes
 |Compression Rule:Follow ~/.config/opencode/AGENTS-compression-guide.md (pipe-index format, concise, no prose/code blocks)

@@ -254,5 +254,13 @@
     "aggressive_truncation": true,
     "task_system": true,
     "disable_omo_env": false
-  }
+  },
+  "_migrations": [
+    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
+    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
+    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
+    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
+    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
+    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4"
+  ]
 }

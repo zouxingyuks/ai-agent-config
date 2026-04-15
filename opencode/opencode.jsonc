@@ -329,37 +329,6 @@
             }
           }
         },
-        "gpt-5.4-mini": {
-          "name": "gpt-5.4-mini",
-          "limit": {
-            "context": 400000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
-          },
-          "interleaved": {
-            "field": "reasoning_content"
-          },
-          "variants": {
-            "low": {
-              "reasoningEffort": "low",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "medium": {
-              "reasoningEffort": "medium",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "high": {
-              "reasoningEffort": "high",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            }
-          }
-        },
         "gpt-5.3-codex-spark": {
           "name": "gpt-5.3-codex-spark",
           "limit": {
@@ -631,7 +600,6 @@
       "credentials/*": "deny",
       "*/.ssh/*": "deny",
       "*/.gnupg/*": "deny",
-      "credentials/*": "deny",
       "*/secrets/*": "deny",
       "*secret*key*": "deny",
       "*kubeconfig*": "deny"

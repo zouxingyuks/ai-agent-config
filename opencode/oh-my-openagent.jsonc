@@ -11,6 +11,7 @@
       "fallback_models": [
         "openai/gpt-5.3-codex"
       ],
+      "variant": "high",
       // 追加提示词：显式加载全局 AGENTS.md
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -21,6 +22,7 @@
       "fallback_models": [
         "openai/gpt-5.2"
       ],
+      "variant": "high",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md\n仅做当前阶段所必需的最小修改，禁止无关改动、顺手重构和范围扩散。\n任务必须分阶段执行，每次只完成一个清晰、可验证的阶段目标。\n每个阶段完成后，必须先提交一个最小、完整、自洽的 commit，再进入下一阶段。\n禁止将多个阶段合并到同一个 commit 中。"
     },
     "prometheus": {
@@ -40,8 +42,8 @@
       "fallback_models": [
         "openai/gpt-5.2"
       ],
-      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md",
-      "variant": "medium"
+      "variant": "high",
+      "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "momus": {
       // 计划与结果验证：对计划/方案进行合理性检查和评审
@@ -50,6 +52,7 @@
       "fallback_models": [
         "openai/gpt-5.3-codex"
       ],
+      "variant": "high",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "sisyphus-junior": {
@@ -58,7 +61,7 @@
       "fallback_models": [
         "openai/gpt-5.2"
       ],
-      "variant": "medium",
+      "variant": "high",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     // ======================
@@ -70,7 +73,7 @@
       "fallback_models": [
         "openai/gpt-5.2"
       ],
-      "variant": "medium",
+      "variant": "high",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     // ======================
@@ -97,6 +100,7 @@
         "edit": "deny",
         "bash": "deny"
       },
+      "variant": "high",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "explore": {
@@ -110,6 +114,7 @@
         "edit": "deny",
         "bash": "deny"
       },
+      "variant": "high",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "multimodal-looker": {
@@ -119,6 +124,7 @@
       "fallback_models": [
         "openai/gpt-5.3-codex"
       ],
+      "variant": "high",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     }
   },
@@ -129,7 +135,7 @@
       "fallback_models": [
         "anthropic/claude-opus-4-6"
       ],
-      "variant": "medium",
+      "variant": "high",
       "description": "Frontend, UI/UX, design, styling, animations, layout work",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -149,7 +155,7 @@
       "fallback_models": [
         "anthropic/claude-opus-4-6"
       ],
-      "variant": "medium",
+      "variant": "high",
       "description": "Autonomous problem-solving, thorough research, end-to-end implementation",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -178,6 +184,7 @@
         "anthropic/claude-sonnet-4-6",
         "openai/gpt-5.3-codex"
       ],
+      "variant": "high",
       "description": "General tasks, low to moderate effort",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -186,7 +193,7 @@
       "fallback_models": [
         "openai/gpt-5.3-codex"
       ],
-      "variant": "max",
+      "variant": "high",
       "description": "General tasks, high effort and complexity",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -256,11 +263,6 @@
     "disable_omo_env": false
   },
   "_migrations": [
-    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
-    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
-    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
-    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
-    "model-version:openai/gpt-5.3-codex->openai/gpt-5.4",
     "model-version:openai/gpt-5.3-codex->openai/gpt-5.4"
   ]
 }

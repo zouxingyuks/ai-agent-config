@@ -153,7 +153,9 @@
       },
       "whitelist": [
         "gpt-5.2",
+        "gpt-5.5",
         "gpt-5.4",
+        "gpt-5.4-pro",
         "gpt-5.4-mini",
         "gpt-5.3-codex",
         "gpt-5.3-codex-spark"
@@ -200,6 +202,47 @@
             }
           }
         },
+        "gpt-5.5": {
+          "limit": {
+            "context": 1050000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "name": "gpt-5.5",
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "high": {
+              "reasoningEffort": "high",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "low": {
+              "reasoningEffort": "low",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            }
+          }
+        },
         "gpt-5.4": {
           "limit": {
             "context": 1050000,
@@ -215,6 +258,47 @@
             ]
           },
           "name": "gpt-5.4",
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "high": {
+              "reasoningEffort": "high",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "low": {
+              "reasoningEffort": "low",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            }
+          }
+        },
+        "gpt-5.4-pro": {
+          "limit": {
+            "context": 1050000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "name": "gpt-5.4-pro",
           "interleaved": {
             "field": "reasoning_content"
           },

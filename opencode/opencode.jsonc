@@ -420,8 +420,12 @@
             "output": 32000
           },
           "modalities": {
-            "input": ["text"],
-            "output": ["text"]
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
           }
         }
       }
@@ -710,20 +714,41 @@
       "/tmp/*": "allow",
       "~//.config/opencode/AGENTS.md": "allow"
     }
-  }
-,
+  },
   "formatter": {
     "gofmt": {
-      "command": ["gofmt", "-w", "$FILE"],
-      "extensions": [".go"]
+      "command": [
+        "gofmt",
+        "-w",
+        "$FILE"
+      ],
+      "extensions": [
+        ".go"
+      ]
     },
     "shfmt": {
-      "command": ["shfmt", "-w", "$FILE"],
-      "extensions": [".sh", ".bash"]
+      "command": [
+        "shfmt",
+        "-w",
+        "$FILE"
+      ],
+      "extensions": [
+        ".sh",
+        ".bash"
+      ]
     },
     "prettier": {
-      "command": ["npx", "prettier", "--write", "$FILE"],
-      "extensions": [".yaml", ".yml", ".md"]
+      "command": [
+        "npx",
+        "prettier",
+        "--write",
+        "$FILE"
+      ],
+      "extensions": [
+        ".yaml",
+        ".yml",
+        ".md"
+      ]
     }
   }
 }

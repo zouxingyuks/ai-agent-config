@@ -17,19 +17,21 @@
     },
     "hephaestus": {
       // 深度自主工作专用，长周期，深度任务
-      "model": "openai/gpt-5.3-codex",
+      "model": "openai/gpt-5.5",
       "variant": "high",
       "fallback_models": [
+        "anthropic/claude-opus-4-6",
         "openai/gpt-5.2"
       ],
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "oracle": {
       // 咨询/调试/架构专家：代码审查、复杂问题拆解，交互式问答
-      // fallback：anthropic/claude-opus-4-6 → gpt-5.3-codex
-      "model": "anthropic/claude-opus-4-6",
+      // fallback：gpt-5.5 → claude-opus-4-6 → gpt-5.3-codex
+      "model": "openai/gpt-5.5",
       "variant": "high",
       "fallback_models": [
+        "anthropic/claude-opus-4-6",
         "openai/gpt-5.3-codex"
       ],
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
@@ -48,7 +50,7 @@
     },
     "multimodal-looker": {
       // 多模态分析：图片、PDF等
-      // fallback：gpt-5.3-codex → claude-sonnet-4-6
+      // fallback：claude-sonnet-4-6 → gpt-5.3-codex
       "model": "anthropic/claude-sonnet-4-6",
       "variant": "high",
       "fallback_models": [
@@ -78,7 +80,7 @@
     },
     "momus": {
       // 计划与结果验证：对计划/方案进行合理性检查和评审
-      // fallback：gpt-5.3-codex → claude-opus-4-6
+      // fallback：claude-opus-4-6 → gpt-5.3-codex
       "model": "anthropic/claude-opus-4-6",
       "variant": "high",
       "fallback_models": [
@@ -129,21 +131,23 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "ultrabrain": {
-      // 超大脑：opus → codex
-      "model": "anthropic/claude-opus-4-6",
+      // 超大脑：gpt-5.5 → opus → codex
+      "model": "openai/gpt-5.5",
       "variant": "xhigh",
       "fallback_models": [
+        "anthropic/claude-opus-4-6",
         "openai/gpt-5.3-codex"
       ],
       "description": "Complex logic, architecture decisions, algorithms, deep reasoning",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "deep": {
-      // 深度执行：codex → opus
-      "model": "openai/gpt-5.3-codex",
+      // 深度执行：gpt-5.5 → opus → codex
+      "model": "openai/gpt-5.5",
       "variant": "high",
       "fallback_models": [
-        "anthropic/claude-opus-4-6"
+        "anthropic/claude-opus-4-6",
+        "openai/gpt-5.3-codex"
       ],
       "description": "Autonomous problem-solving, thorough research, end-to-end implementation",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
@@ -199,7 +203,8 @@
   "git_master": {
     // 提交时携带 opencode 信息
     "commit_footer": false,
-    "include_co_authored_by": false
+    "include_co_authored_by": false,
+    "git_env_prefix": "GIT_MASTER=1"
   },
   "notification": {
     "force_enable": true
@@ -213,6 +218,7 @@
     },
     "modelConcurrency": {
       "anthropic/claude-opus-4-6": 10,
+      "openai/gpt-5.5": 10,
       "openai/gpt-5.3-codex": 20
     }
   },
@@ -237,13 +243,15 @@
     "layout": "main-vertical",
     "main_pane_size": 60,
     "main_pane_min_width": 120,
-    "agent_pane_min_width": 40
+    "agent_pane_min_width": 40,
+    "isolation": "inline"
   },
   "hashline_edit": true,
   "model_capabilities": {
     "enabled": true,
     "auto_refresh_on_start": true,
-    "refresh_timeout_ms": 5000
+    "refresh_timeout_ms": 5000,
+    "source_url": "https://models.dev/api.json"
   },
   "experimental": {
     "aggressive_truncation": true,

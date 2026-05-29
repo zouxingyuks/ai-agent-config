@@ -13,9 +13,54 @@
       "whitelist": [
         "claude-sonnet-4-6",
         "claude-opus-4-6",
+        "claude-opus-4-7",
         "claude-haiku-4-5"
       ],
       "models": {
+        "claude-opus-4-7": {
+          "name": "claude-opus-4-7",
+          "attachment": false,
+          "limit": {
+            "context": 200000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 16000
+            }
+          },
+          "variants": {
+            "low": {
+              "effort": "low"
+            },
+            "medium": {
+              "effort": "high"
+            },
+            "high": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 32000
+              }
+            },
+            "xhigh": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 128000
+              },
+              "speed": "fast"
+            }
+          }
+        },
         "claude-opus-4-6": {
           "name": "claude-opus-4-6",
           "attachment": false,

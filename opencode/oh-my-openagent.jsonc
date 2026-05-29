@@ -62,8 +62,8 @@
     },
     "multimodal-looker": {
       // 多模态分析：图片、PDF等
-      // fallback：claude-sonnet-4-7 → gpt-5.3-codex
-      "model": "anthropic/claude-sonnet-4-7",
+      // fallback：claude-sonnet-4-6 → gpt-5.3-codex
+      "model": "anthropic/claude-sonnet-4-6",
       "variant": "high",
       "fallback_models": [
         "openai/gpt-5.3-codex"
@@ -102,7 +102,7 @@
     },
     "atlas": {
       // 高级编排器：全生命周期管理，任务路由，基于skills调度，全局会话级别的编排器，一般由内部逻辑/hook唤起
-      "model": "anthropic/claude-sonnet-4-7",
+      "model": "anthropic/claude-sonnet-4-6",
       "fallback_models": [
         "openai/gpt-5.2"
       ],
@@ -173,7 +173,7 @@
     "unspecified-low": {
       "model": "openai/gpt-5.3-codex",
       "fallback_models": [
-        "anthropic/claude-sonnet-4-7",
+        "anthropic/claude-sonnet-4-6",
         "openai/gpt-5.3-codex"
       ],
       "variant": "high",
@@ -192,7 +192,7 @@
     "writing": {
       "model": "openai/gpt-5.3-codex",
       "fallback_models": [
-        "anthropic/claude-sonnet-4-7"
+        "anthropic/claude-sonnet-4-6"
       ],
       "description": "Documentation, prose, technical writing, creative content",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"

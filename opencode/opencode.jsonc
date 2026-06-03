@@ -624,6 +624,8 @@
       "diff *": "allow",
       "curl *": "allow",
       "jq *": "allow",
+      "tmux": "allow",
+      "tmux *": "allow",
       "helm *": "allow",
       "kubectl get *": "allow",
       "kubectl describe *": "allow",

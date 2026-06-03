@@ -22,10 +22,10 @@ list_link_pairs() {
   local opencode_dir="./opencode"
   if [[ -d "${opencode_dir}" ]]; then
     shopt -s nullglob
-    local jsonc_files=("${opencode_dir}"/*.jsonc)
+    local opencode_files=("${opencode_dir}"/*.jsonc "${opencode_dir}"/*.json)
     shopt -u nullglob
 
-    for f in "${jsonc_files[@]}"; do
+    for f in "${opencode_files[@]}"; do
       printf '%s\t%s\n' "$(realpath "${f}")" "${TARGET_DIR}/$(basename "${f}")"
     done
   fi

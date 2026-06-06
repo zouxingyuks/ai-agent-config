@@ -37,8 +37,9 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "librarian": {
-      "model": "anthropic/claude-haiku-4-5",
+      "model": "openai/gpt-5.4-mini",
       "fallback_models": [
+        "anthropic/claude-haiku-4-5",
         "openai/gpt-5.3-codex-spark"
       ],
       "permission": {
@@ -49,8 +50,9 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "explore": {
-      "model": "anthropic/claude-haiku-4-5",
+      "model": "openai/gpt-5.4-mini",
       "fallback_models": [
+        "anthropic/claude-haiku-4-5",
         "openai/gpt-5.3-codex-spark"
       ],
       "permission": {
@@ -237,7 +239,7 @@
   },
   "tmux": {
     "enabled": true,
-    "layout": "main-vertical",
+    "layout": "tiled",
     "main_pane_size": 60,
     "main_pane_min_width": 120,
     "agent_pane_min_width": 40,

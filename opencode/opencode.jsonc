@@ -487,7 +487,7 @@
     "opencode-axonhub-tracing@1.1.0",
     "@franlol/opencode-md-table-formatter@0.0.6",
     "@tarquinen/opencode-dcp@3.1.12",
-    "oh-my-openagent@latest"
+    "oh-my-openagent@v4.7.5"
   ],
   "share": "disabled",
   "watcher": {

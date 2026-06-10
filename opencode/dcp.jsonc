@@ -5,7 +5,7 @@
   "enabled": true,
 
   // 将调试日志写入 ~/.config/opencode/logs/dcp/，用于排查问题（默认: false）
-  "debug": true,
+  "debug": false,
 
   // 裁剪通知的详细程度：
   //   "off"      — 不通知
@@ -57,16 +57,6 @@
     "openspec/**",
     "**/AGENTS.md"
   ],
-
-  // 实验性功能 —— 可能在未来版本中变更或移除
-  "experimental": {
-    // 允许 DCP 在子代理（task()）会话中处理，而不仅限于主会话（默认: false）
-    "allowSubAgents": true,
-    // 启用用户可编辑的 prompt 覆盖，从 dcp-prompts/ 目录加载。
-    // 搜索顺序：项目 .opencode/dcp-prompts/ → 全局 ~/.config/opencode/dcp-prompts/
-    "customPrompts": false
-  },
-
   // 统一的 compress 工具配置。
   // 控制替代旧版 distill/compress/prune 工具的单一 compress 工具。
   "compress": {

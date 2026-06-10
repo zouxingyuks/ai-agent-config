@@ -47,7 +47,7 @@
         "edit": "deny",
         "bash": "deny"
       },
-      "variant": "high",
+      "variant": "low",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "explore": {
@@ -60,7 +60,7 @@
         "edit": "deny",
         "bash": "deny"
       },
-      "variant": "high",
+      "variant": "low",
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "multimodal-looker": {
@@ -173,6 +173,7 @@
     "quick": {
       // 快速小活：gpt-5.4-mini → haiku
       "model": "openai/gpt-5.4-mini",
+      "variant": "low",
       "fallback_models": [
         "anthropic/claude-haiku-4-5"
       ],
@@ -183,8 +184,7 @@
       "model": "openai/gpt-5.5",
       "fallback_models": [
         "openai/gpt-5.3-codex",
-        "anthropic/claude-sonnet-4-6",
-        "openai/gpt-5.3-codex"
+        "anthropic/claude-sonnet-4-6"
       ],
       "variant": "high",
       "description": "General tasks, low to moderate effort",
@@ -234,20 +234,22 @@
   "runtime_fallback": {
     "enabled": true,
     "retry_on_errors": [
-      400,
       429,
+      500,
+      502,
       503,
+      504,
       529
     ],
-    "max_fallback_attempts": 3,
+    "max_fallback_attempts": 2,
     "cooldown_seconds": 60,
-    "timeout_seconds": 30,
+    "timeout_seconds": 20,
     "notify_on_fallback": true
   },
   "hashline_edit": true,
   "model_capabilities": {
     "enabled": true,
-    "auto_refresh_on_start": true,
+    "auto_refresh_on_start": false,
     "refresh_timeout_ms": 5000,
     "source_url": "https://models.dev/api.json"
   }

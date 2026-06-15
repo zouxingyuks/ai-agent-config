@@ -554,6 +554,17 @@
       "type": "remote",
       "enabled": true,
       "url": "https://mcp.grep.app"
+    },
+    "mise": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "mise",
+        "mcp"
+      ],
+      "environment": {
+        "MISE_EXPERIMENTAL": "1"
+      }
     }
   },
   "plugin": [

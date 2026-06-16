@@ -1,7 +1,15 @@
 [tools]
+# Language runtimes used by agents and project scripts.
+python = "3.10"
 go = "1.23.10"
+
+# Go tooling.
 "go:golang.org/x/tools/gopls" = "latest"
+
+# Formatters, linters, and language servers installed from npm.
 "npm:@biomejs/biome" = "latest"
+"npm:dockerfile-language-server-nodejs" = "latest"
+"npm:markdown-language-server" = "latest"
 "npm:@vue/language-server" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:oxlint" = "latest"
@@ -9,8 +17,12 @@ go = "1.23.10"
 "npm:typescript-language-server" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 "npm:yaml-language-server" = "latest"
+
+# Python linters/type checkers exposed through pipx.
 "pipx:basedpyright" = "latest"
 "pipx:ruff" = "latest"
+
+# CLI utilities commonly used by agents.
 ripgrep = "latest"
 jq = "latest"
 yq = "latest"

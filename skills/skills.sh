@@ -6,8 +6,11 @@ npx skills update -g
 # Core discovery skill used to find and manage additional skills.
 npx skills add --agent opencode -g https://github.com/vercel-labs/skills --skill find-skills -y
 
-# Workflow and architecture helpers.
+# Design documentation.
 npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill grill-me -y
+npx skills add --agent opencode -g https://github.com/spillwavesolutions/design-doc-mermaid --skill design-doc-mermaid -y
+
+# Workflow and architecture helpers.
 npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill improve-codebase-architecture
 npx skills add --agent opencode -g https://github.com/github/awesome-copilot --skill refactor -y
 

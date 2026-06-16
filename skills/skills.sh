@@ -7,4 +7,4 @@ npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill 
 npx skills add --agent opencode -g https://github.com/zouxingyuks/skills --skill skill-retrospective -y
 npx skills add --agent opencode -g https://github.com/github/awesome-copilot --skill refactor -y
 npx skills add --agent opencode -g https://github.com/samber/cc-skills-golang -y
-npx skills ls --agent opencode -g
+npx skills ls --agent opencode -g -y

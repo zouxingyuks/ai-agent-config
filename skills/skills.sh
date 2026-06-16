@@ -11,7 +11,7 @@ npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill 
 npx skills add --agent opencode -g https://github.com/spillwavesolutions/design-doc-mermaid --skill design-doc-mermaid -y
 
 # Workflow and architecture helpers.
-npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill improve-codebase-architecture
+npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill improve-codebase-architecture -y
 npx skills add --agent opencode -g https://github.com/github/awesome-copilot --skill refactor -y
 
 # Personal or project-specific skills.

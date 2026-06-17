@@ -24,5 +24,8 @@ npx skills add --agent opencode -g https://github.com/samber/cc-skills-golang -y
 ## Python
 npx skills add --agent opencode -g https://github.com/wshobson/agents --skill python-design-patterns -y
 
+# Github
+npx skills add --agent opencode -g https://github.com/xixu-me/skills --skill github-actions-docs -y
+
 # Show the final global skill set for OpenCode.
 npx skills ls --agent opencode -g -y

@@ -15,7 +15,7 @@ npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill 
 npx skills add --agent opencode -g https://github.com/github/awesome-copilot --skill refactor -y
 
 # Personal or project-specific skills.
-npx skills add --agent opencode -g https://github.com/zouxingyuks/skills --skill skill-retrospective -y
+npx skills add --agent opencode -g https://github.com/zouxingyuks/skills -y
 
 # Language-specific skill packs.
 ## Go

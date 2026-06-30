@@ -8,6 +8,10 @@ npx skills add --agent opencode -g https://github.com/vercel-labs/skills --skill
 
 # Design documentation.
 npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill grill-me -y
+npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill grill-with-docs -y
+npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill grilling -y
+npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill handoff -y
+npx skills add --agent opencode -g https://github.com/mattpocock/skills --skill domain-modeling -y
 npx skills add --agent opencode -g https://github.com/spillwavesolutions/design-doc-mermaid --skill design-doc-mermaid -y
 
 # Workflow and architecture helpers.

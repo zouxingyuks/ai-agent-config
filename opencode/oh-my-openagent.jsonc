@@ -218,19 +218,6 @@
   "notification": {
     "force_enable": true
   },
-  "background_task": {
-    "defaultConcurrency": 8,
-    "staleTimeoutMs": 180000,
-    "providerConcurrency": {
-      "anthropic": 4,
-      "openai": 8
-    },
-    "modelConcurrency": {
-      "anthropic/claude-opus-4-7": 2,
-      "openai/gpt-5.5": 6,
-      "openai/gpt-5.3-codex": 8
-    }
-  },
   "runtime_fallback": {
     "enabled": true,
     "retry_on_errors": [

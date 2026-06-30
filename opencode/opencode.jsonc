@@ -194,7 +194,10 @@
         "baseURL": "{env:OPENAI_BASE_URL}",
         "apiKey": "{env:OPENAI_AUTH_TOKEN}",
         "disableMaxOutputTokens": true,
-        "truncation": "auto"
+        "truncation": "auto",
+        "headerTimeout": 60000,
+        "timeout": 600000,
+        "chunkTimeout": 60000
       },
       "whitelist": [
         "gpt-5.2",

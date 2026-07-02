@@ -4,6 +4,9 @@ python = "3.10"
 go = "1.23.10"
 node = "v24.18.0"
 
+# Python tooling.
+"pipx:black" = "latest"
+
 # Go tooling.
 "go:golang.org/x/tools/gopls" = "latest"
 

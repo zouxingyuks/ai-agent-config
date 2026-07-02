@@ -2,6 +2,7 @@
 # Language runtimes used by agents and project scripts.
 python = "3.10"
 go = "1.23.10"
+node = "v24.18.0"
 
 # Go tooling.
 "go:golang.org/x/tools/gopls" = "latest"

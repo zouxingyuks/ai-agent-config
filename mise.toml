@@ -29,6 +29,7 @@ node = "v24.18.0"
 "pipx:ruff" = "latest"
 
 # CLI utilities commonly used by agents.
+uv = "latest"
 ripgrep = "latest"
 jq = "latest"
 yq = "latest"

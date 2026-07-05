@@ -11,6 +11,7 @@
 ├── AGENTS.md                    # 全局 agent 行为约束，使用高密度 pipe-index 格式
 ├── AGENTS-compression-guide.md  # AGENTS.md 压缩格式与维护指南
 ├── mise.toml                    # 基础工具链：Go、LSP、Biome、ripgrep、jq、yq、gh、ast-grep 等
+├── mise.sh                      # 将 mise.toml 链接到 mise 全局配置的脚本
 ├── opencode.sh                  # 将配置链接到 OpenCode 配置目录的脚本
 ├── opencode/
 │   ├── opencode.jsonc           # OpenCode 主配置：providers、MCP、plugins、permissions、formatters
@@ -32,6 +33,7 @@ curl https://mise.run | sh
 安装本仓库声明的基础工具：
 
 ```bash
+./mise.sh link
 mise install
 ```
 
@@ -54,6 +56,24 @@ mise install
 ```
 
 ## 安装脚本
+
+`mise.sh` 默认把仓库根目录的 `mise.toml` 链接到 `~/.config/mise/config.toml`：
+
+```bash
+./mise.sh link
+```
+
+可通过环境变量调整目标目录：
+
+```bash
+TARGET_DIR=/path/to/mise-config ./mise.sh link
+```
+
+检查目标配置是否与仓库一致：
+
+```bash
+./mise.sh diff
+```
 
 `opencode.sh` 默认把这些文件链接到 `~/.config/opencode`：
 
@@ -118,6 +138,8 @@ mise install
 修改配置后：
 
 ```bash
+./mise.sh diff
+./mise.sh link
 ./opencode.sh diff
 ./opencode.sh link
 ```

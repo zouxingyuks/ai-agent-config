@@ -4,6 +4,17 @@ python = "3.10"
 go = "1.23.10"
 node = "v24.18.0"
 
+# CLI utilities commonly used by agents.
+uv = "latest"
+npm = "latest"
+ripgrep = "latest"
+jq = "latest"
+yq = "latest"
+github-cli = "latest"
+fd = "latest"
+ast-grep = "latest"
+gh = "latest"
+
 # Python tooling.
 "pipx:black" = "latest"
 
@@ -28,12 +39,4 @@ node = "v24.18.0"
 "pipx:basedpyright" = "latest"
 "pipx:ruff" = "latest"
 
-# CLI utilities commonly used by agents.
-uv = "latest"
-ripgrep = "latest"
-jq = "latest"
-yq = "latest"
-github-cli = "latest"
-fd = "latest"
-ast-grep = "latest"
-gh = "latest"
+

@@ -14,6 +14,8 @@ github-cli = "latest"
 fd = "latest"
 ast-grep = "latest"
 gh = "latest"
+helm = "latest"
+
 
 # Python tooling.
 "pipx:black" = "latest"

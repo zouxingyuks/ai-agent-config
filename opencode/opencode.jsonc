@@ -535,8 +535,6 @@
       "php *": "allow",
       "tmux": "allow",
       "tmux *": "allow",
-      "opsx *": "allow",
-      "openspec *": "allow",
       "gh *": "ask",
       "gh -h": "allow",
       "gh --help": "allow",

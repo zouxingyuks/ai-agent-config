@@ -550,6 +550,13 @@
       "docker ps *": "allow",
       "docker logs *": "allow",
       "docker images *": "allow",
+      "git show *": "allow",
+      "git status *": "allow",
+      "git remote -v": "allow",
+      "git remote show": "allow",
+      "git branch -vv": "allow",
+      "git diff *": "allow",
+      "git fetch": "allow",
 
       // Commands that can change files, dependencies, infrastructure, or external state.
       "cp *": "ask",
@@ -600,8 +607,6 @@
       "sudo apt *": "ask",
 
       // Destructive or privilege-sensitive commands stay denied even if broader ask rules match earlier.
-      "git status *": "ask",
-      "git diff *": "ask",
       "git push *": "ask",
       "git push --force *": "deny",
       "git push -f *": "deny",

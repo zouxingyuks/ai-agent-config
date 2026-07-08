@@ -18,7 +18,7 @@
 │   ├── oh-my-openagent.jsonc    # OhMyOpenAgent agents / categories / fallback 配置
 │   ├── dcp.jsonc                # Dynamic Context Pruning 配置
 │   └── tui.json                 # TUI 插件配置
-└── skills/
+└── scripts/
     └── skills.sh                # 全局安装常用 OpenCode skills
 ```
 
@@ -52,7 +52,7 @@ mise install
 安装常用 skills：
 
 ```bash
-./skills/skills.sh
+./scripts/skills.sh
 ```
 
 ## 安装脚本
@@ -147,7 +147,7 @@ mise install
 更新全局 skills：
 
 ```bash
-./skills/skills.sh
+./scripts/skills.sh
 ```
 
 ## 注意事项

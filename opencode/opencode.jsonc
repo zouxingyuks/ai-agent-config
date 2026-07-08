@@ -778,7 +778,19 @@
       "*/.ssh/**": "deny",
       "*/secrets/**": "deny"
     },
-    "skill": {
+    "list": {
+      "*": "allow"
+    },
+    "repo_clone": {
+      "*": "allow"
+    },
+    "repo_overview":{
+      "*": "allow"
+    },
+    "lsp": {
+      "*": "allow"
+    },
+    "skill":{
       "*": "allow"
     },
     "question": "allow",
@@ -793,9 +805,6 @@
     "apply_patch": "allow",
     "look_at": "allow",
     "interactive_bash": "ask",
-    "lsp": "allow",
-    "lsp_*": "allow",
-    "lsp_rename": "allow",
     "webfetch": "allow",
     "websearch": "allow",
     // MCP and remote read/search tools that are actually available in this setup.

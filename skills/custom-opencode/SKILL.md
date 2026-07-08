@@ -1,3 +1,8 @@
+---
+name: custom-opencode
+description: Use ONLY when editing or creating OpenCode configuration, agents, commands, skills, plugins, MCP servers, or schema-valid opencode.json/opencode.jsonc structure. For permission policy audits, allow/ask/deny rules, CLI/MCP tool permissions, or permission hardening, use opencode-permission-auditor instead.
+---
+
 <!--
   Built-in skill. Name and description are registered in code at
   packages/core/src/plugin/skill.ts
@@ -6,6 +11,8 @@
 -->
 
 # Customizing opencode
+
+Use this skill for OpenCode configuration structure and customization. For permission policy audits, allow/ask/deny rules, CLI/MCP tool permissions, or permission hardening, use `opencode-permission-auditor` instead.
 
 opencode validates its own config strictly and refuses to start when a field
 is wrong. The shapes below cover the common surface area, but they are a

@@ -20,6 +20,7 @@ npx skills add --agent opencode -g https://github.com/github/awesome-copilot --s
 
 # Personal or project-specific skills.
 npx skills add --agent opencode -g https://github.com/infituit/skills -y
+npx skills add --agent opencode -g https://github.com/zouxingyuks/ai-agent-config -y
 
 # Language-specific skill packs.
 ## Go

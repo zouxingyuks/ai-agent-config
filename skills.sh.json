@@ -6,7 +6,8 @@
       "title": "OpenCode",
       "description": "Skills for configuring and customizing OpenCode.",
       "skills": [
-        "custom-opencode"
+        "custom-opencode",
+        "opencode-permission-auditor"
       ]
     }
   ]

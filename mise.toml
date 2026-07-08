@@ -36,6 +36,7 @@ helm = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 "npm:yaml-language-server" = "latest"
+"npm:playwright" = "1.61.0"
 
 # Python linters/type checkers exposed through pipx.
 "pipx:basedpyright" = "latest"

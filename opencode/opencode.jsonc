@@ -507,7 +507,6 @@
   "small_model": "openai/gpt-5.3-codex-spark",
   "permission": {
     // Baseline: unknown capabilities ask by default. Specific safe tools are allowed below.
-    "*": "ask",
     "bash": {
       // Local read-only inspection and verification.
       "pwd": "allow",
@@ -776,45 +775,7 @@
       "*/.ssh/**": "deny",
       "*/secrets/**": "deny"
     },
-    "list": {
-      "*": "allow"
-    },
-    "repo_clone": {
-      "*": "allow"
-    },
-    "repo_overview":{
-      "*": "allow"
-    },
-    "lsp": {
-      "*": "allow"
-    },
-    "skill":{
-      "*": "allow"
-    },
-    "question": "allow",
-    "task": "allow",
-    "background_output": "allow",
-    "background_cancel": "allow",
-    "todowrite": "allow",
-    "todoread": "allow",
-    "compress": "allow",
-    "session_*": "allow",
-    "multi_tool_use.parallel": "allow",
-    "apply_patch": "allow",
-    "look_at": "allow",
     "interactive_bash": "ask",
-    "webfetch": "allow",
-    "websearch": "allow",
-    // MCP and remote read/search tools that are actually available in this setup.
-    "serena_*": "allow",
-    "memory_*": "allow",
-    "context7_*": "allow",
-    "exa_*": "allow",
-    "sequential-thinking_*": "allow",
-    "deepwiki_*": "allow",
-    "mcp-deepwiki_*": "allow",
-    "gh_grep_*": "allow",
-    "grep_app_*": "allow",
     "mise_*": "ask",
     "external_directory": {
       "*": "ask",

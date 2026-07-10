@@ -1014,7 +1014,8 @@
     "external_directory": {
       "*": "ask",
       "/tmp/**": "allow",
-      "~/.config/opencode/**": "allow"
+      "~/.config/opencode/**": "allow",
+      "~/.agents/skills/*": "allow"
     }
   },
   "formatter": {

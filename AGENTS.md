@@ -1,4 +1,5 @@
 |IMPORTANT: Prefer retrieval-led reasoning over pre-training-led reasoning
+|Local Pattern & Skill Gate:before any file-changing task, search for similar project code/config/docs and inspect at least one representative example|follow local structure, naming, error handling, tests, and prose unless user instructions, project rules, tests, or public contracts take precedence|when local patterns conflict, report the conflict and prefer the closest, newer, dominant pattern; ask before changing public behavior|evaluate the full advertised skill list, load and apply every relevant skill, preferring user-installed skills; "loaded but unused" does not qualify|delegation does not transfer responsibility: pass references and relevant skills to subagents, require further local-pattern search, and verify their output|final response must list referenced files and skills actually used; explicitly report when none exist|for mechanical edits with no design decision, the target file may be the sole reference
 
 |Must use: sequential-thinking in all time.
 |Core Tools: always use this tools|serena (semantic code ops)|context7 (3rd-party docs)|sequential-thinking (decisions)

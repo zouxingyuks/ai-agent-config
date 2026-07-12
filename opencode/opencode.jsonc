@@ -541,7 +541,7 @@
       "gh help *": "allow",
       "gh status": "allow",
       "gh status *": "allow",
-      "gh auth status": "allow",
+      "gh auth status --json hosts": "allow",
       // Common read-only GitHub CLI commands.
       "gh search code *": "allow",
       "gh search commits *": "allow",
@@ -655,7 +655,11 @@
       "git rebase *": "ask",
       "git cherry-pick *": "ask",
       "git commit *": "ask",
-      "git commit --amend *": "deny",
+      "git log *": "allow",
+      "git tag *": "allow",
+      "git tag -d *": "deny",
+      "git tag --delete *": "deny",
+      "git for-each-ref *": "allow",
       "docker system prune *": "deny",
       "kubectl drain *": "deny",
       "gh auth token*": "deny",
@@ -672,7 +676,9 @@
       "gh ssh-key delete*": "deny",
       "gh gpg-key delete*": "deny",
       "rm -rf *": "deny",
-      "sudo rm *": "deny"
+      "sudo rm *": "deny",
+      "ansible-playbook": "ask",
+      "ansible-playbook --syntax-check *": "allow"
     },
     "bash": {
       "*": "ask",
@@ -708,7 +714,7 @@
       "gh help *": "allow",
       "gh status": "allow",
       "gh status *": "allow",
-      "gh auth status": "allow",
+      "gh auth status --json hosts": "allow",
       // Common read-only GitHub CLI commands.
       "gh search code *": "allow",
       "gh search commits *": "allow",
@@ -822,9 +828,11 @@
       "git rebase *": "ask",
       "git cherry-pick *": "ask",
       "git commit *": "ask",
+      "git log *": "allow",
       "git tag *": "allow",
       "git tag -d *": "deny",
       "git tag --delete *": "deny",
+      "git for-each-ref *": "allow",
       "docker system prune *": "deny",
       "kubectl drain *": "deny",
       "gh auth token*": "deny",
@@ -841,7 +849,9 @@
       "gh ssh-key delete*": "deny",
       "gh gpg-key delete*": "deny",
       "rm -rf *": "deny",
-      "sudo rm *": "deny"
+      "sudo rm *": "deny",
+      "ansible-playbook": "ask",
+      "ansible-playbook --syntax-check *": "allow"
     },
     "read": {
       "*": "allow",

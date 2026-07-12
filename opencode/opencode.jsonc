@@ -595,6 +595,9 @@
       "git status *": "allow",
       "git remote -v": "allow",
       "git remote show": "allow",
+      "git rev-parse *":"allow",
+      "git merge-base *":"allow",
+
       "git branch -vv": "allow",
       "git diff *": "allow",
       "git fetch": "allow",
@@ -768,6 +771,8 @@
       "git status *": "allow",
       "git remote -v": "allow",
       "git remote show": "allow",
+      "git rev-parse *":"allow",
+      "git merge-base *":"allow",
       "git branch -vv": "allow",
       "git diff *": "allow",
       "git fetch": "allow",

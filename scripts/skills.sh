@@ -38,3 +38,9 @@ npx skills add --agent opencode -g https://github.com/microsoft/playwright-cli -
 
 # Show the final global skill set for OpenCode.
 npx skills ls --agent opencode -g -y
+
+# MongoDB
+
+gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-schema-design
+gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-connection
+gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-query-optimizer

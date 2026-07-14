@@ -44,3 +44,9 @@ npx skills ls --agent opencode -g -y
 gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-schema-design
 gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-connection
 gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-query-optimizer
+
+# Redis
+gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-connections
+gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-clustering
+gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-core
+gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-search

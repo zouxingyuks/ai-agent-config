@@ -2,7 +2,7 @@
 # Language runtimes used by agents and project scripts.
 python = ["3.9","3.10"]
 go = "1.23.10"
-node = "v24.18.0"
+node = "24.18.0"
 
 # CLI utilities commonly used by agents.
 uv = "latest"

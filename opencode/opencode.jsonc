@@ -603,6 +603,7 @@
       "git merge-base *":"allow",
 
       "git branch -vv": "allow",
+      "git branch --show-current": "allow",
       "git diff *": "allow",
       "git fetch": "allow",
       // Commands that can change files, dependencies, infrastructure, or external state.
@@ -776,6 +777,7 @@
       "git rev-parse *":"allow",
       "git merge-base *":"allow",
       "git branch -vv": "allow",
+      "git branch --show-current": "allow",
       "git diff *": "allow",
       "git fetch": "allow",
       // Commands that can change files, dependencies, infrastructure, or external state.

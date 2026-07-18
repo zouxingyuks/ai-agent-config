@@ -43,4 +43,6 @@ helm = "latest"
 "pipx:basedpyright" = "latest"
 "pipx:ruff" = "latest"
 
+"github:artifacthub/hub" = "latest"
+
 

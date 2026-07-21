@@ -515,6 +515,7 @@
       "*": "ask",
       // Local read-only inspection and verification.
       "pwd": "allow",
+      "sleep *": "ask",
       "ls *": "allow",
       "find *": "allow",
       "rg *": "allow",
@@ -693,6 +694,7 @@
       "*": "ask",
       // Local read-only inspection and verification.
       "pwd": "allow",
+      "sleep *": "ask",
       "ls *": "allow",
       "find *": "allow",
       "rg *": "allow",

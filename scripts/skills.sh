@@ -50,3 +50,5 @@ gh skill install --scope user --agent opencode https://github.com/redis/agent-sk
 gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-clustering
 gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-core
 gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-search
+
+npx skills add --agent opencode -g https://github.com/kepano/obsidian-skills.git -y

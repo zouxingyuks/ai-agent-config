@@ -411,6 +411,7 @@
     "auto": false,
     "prune": false
   },
+  "lsp": true,
   "mcp": {
     "serena": {
       "type": "local",

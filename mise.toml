@@ -38,11 +38,11 @@ helm = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 "npm:yaml-language-server" = "latest"
 "npm:@playwright/cli" = "latest"
+"npm:@colbymchenry/codegraph" = "latest"
 
 # Python linters/type checkers exposed through pipx.
 "pipx:basedpyright" = "latest"
 "pipx:ruff" = "latest"
 
 "github:artifacthub/hub" = "latest"
-
 

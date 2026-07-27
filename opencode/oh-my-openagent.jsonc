@@ -250,7 +250,7 @@
       504,
       529
     ],
-    "max_fallback_attempts": 2,
+    "max_fallback_attempts": 3,
     "cooldown_seconds": 60,
     "timeout_seconds": 20,
     "notify_on_fallback": true
@@ -258,7 +258,7 @@
   "hashline_edit": true,
   "model_capabilities": {
     "enabled": true,
-    "auto_refresh_on_start": false,
+    "auto_refresh_on_start": true,
     "refresh_timeout_ms": 5000,
     "source_url": "https://models.dev/api.json"
   },

@@ -6,10 +6,11 @@
     // ======================
     "sisyphus": {
       // 主编排器：委托任务编排分配、TODO、后台并行、动态组合技能，调用subagent
-      // fallback：claude-opus-4-7 → gpt-5.3-codex
-      "model": "openai/gpt-5.6-terra",
+      // fallback：gpt-5.6-terra → claude-opus-4-7 → gpt-5.3-codex
+      "model": "openai/gpt-5.5",
       "variant": "high",
       "fallback_models": [
+        "openai/gpt-5.6-terra",
         "anthropic/claude-opus-4-7",
         "openai/gpt-5.3-codex"
       ],
@@ -18,9 +19,10 @@
     },
     "hephaestus": {
       // 深度自主工作专用，长周期，深度任务
-      "model": "openai/gpt-5.6-terra",
+      "model": "openai/gpt-5.5",
       "variant": "high",
       "fallback_models": [
+        "openai/gpt-5.6-terra",
         "anthropic/claude-opus-4-7"
       ],
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
@@ -88,10 +90,11 @@
     },
     "multimodal-looker": {
       // 多模态分析：图片、PDF等
-      // fallback：claude-sonnet-4-6 → gpt-5.3-codex
-      "model": "openai/gpt-5.6-terra",
+      // fallback：gpt-5.6-terra → claude-sonnet-4-6 → gpt-5.3-codex
+      "model": "openai/gpt-5.5",
       "variant": "high",
       "fallback_models": [
+        "openai/gpt-5.6-terra",
         "anthropic/claude-sonnet-4-6",
         "openai/gpt-5.3-codex"
       ],
@@ -135,8 +138,9 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md\n仅做当前阶段所必需的最小修改，禁止无关改动、顺手重构和范围扩散。\n任务必须分阶段执行，每次只完成一个清晰、可验证的阶段目标。\n每个阶段完成后，必须先提交一个最小、完整、自洽的 commit，再进入下一阶段。\n禁止将多个阶段合并到同一个 commit 中。"
     },
     "sisyphus-junior": {
-      "model": "openai/gpt-5.6-terra",
+      "model": "openai/gpt-5.5",
       "fallback_models": [
+        "openai/gpt-5.6-terra",
         "openai/gpt-5.3-codex"
       ],
       "variant": "high",
@@ -145,10 +149,11 @@
   },
   "categories": {
     "visual-engineering": {
-      // 视觉/前端/GUI：gpt-5.6-terra → opus
-      "model": "openai/gpt-5.6-terra",
+      // 视觉/前端/GUI：gpt-5.5 → gpt-5.6-terra → opus
+      "model": "openai/gpt-5.5",
       "variant": "high",
       "fallback_models": [
+        "openai/gpt-5.6-terra",
         "anthropic/claude-opus-4-7"
       ],
       "description": "Frontend, UI/UX, design, styling, animations, layout work",
@@ -166,10 +171,11 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "deep": {
-      // 深度执行：gpt-5.6-terra → opus → codex
-      "model": "openai/gpt-5.6-terra",
+      // 深度执行：gpt-5.5 → gpt-5.6-terra → opus → codex
+      "model": "openai/gpt-5.5",
       "variant": "high",
       "fallback_models": [
+        "openai/gpt-5.6-terra",
         "anthropic/claude-opus-4-7",
         "openai/gpt-5.3-codex"
       ],
@@ -198,8 +204,9 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "unspecified-low": {
-      "model": "openai/gpt-5.6-terra",
+      "model": "openai/gpt-5.5",
       "fallback_models": [
+        "openai/gpt-5.6-terra",
         "openai/gpt-5.3-codex",
         "anthropic/claude-sonnet-4-6"
       ],
@@ -208,8 +215,9 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "unspecified-high": {
-      "model": "openai/gpt-5.6-terra",
+      "model": "openai/gpt-5.5",
       "fallback_models": [
+        "openai/gpt-5.6-terra",
         "anthropic/claude-opus-4-7",
         "openai/gpt-5.3-codex"
       ],
@@ -218,8 +226,9 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
     "writing": {
-      "model": "openai/gpt-5.6-terra",
+      "model": "openai/gpt-5.5",
       "fallback_models": [
+        "openai/gpt-5.6-terra",
         "openai/gpt-5.3-codex",
         "anthropic/claude-sonnet-4-6"
       ],

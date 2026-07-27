@@ -200,16 +200,18 @@
         "chunkTimeout": 60000
       },
       "whitelist": [
-        "gpt-5.2",
         "gpt-5.5",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna",
         "gpt-5.4-mini",
         "gpt-5.3-codex",
         "gpt-5.3-codex-spark"
       ],
       "models": {
-        "gpt-5.2": {
+        "gpt-5.5": {
           "limit": {
-            "context": 400000,
+            "context": 200000,
             "output": 128000
           },
           "modalities": {
@@ -221,7 +223,7 @@
               "text"
             ]
           },
-          "name": "gpt-5.2",
+          "name": "gpt-5.5",
           "interleaved": {
             "field": "reasoning_content"
           },
@@ -248,9 +250,9 @@
             }
           }
         },
-        "gpt-5.5": {
+        "gpt-5.6-sol": {
           "limit": {
-            "context": 200000,
+            "context": 272000,
             "output": 128000
           },
           "modalities": {
@@ -262,10 +264,113 @@
               "text"
             ]
           },
-          "name": "gpt-5.5",
+          "name": "gpt-5.6-sol",
           "interleaved": {
             "field": "reasoning_content"
           },
+          "cost": {
+            "input": 5,
+            "output": 30,
+            "cache_read": 0.5
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "variants": {
+            "high": {
+              "reasoningEffort": "high",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "low": {
+              "reasoningEffort": "low",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            }
+          }
+        },
+        "gpt-5.6-terra": {
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "name": "gpt-5.6-terra",
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "cost": {
+            "input": 2.5,
+            "output": 15,
+            "cache_read": 0.25
+          },
+          "reasoning": true,
+          "tool_call": true,
+          "variants": {
+            "high": {
+              "reasoningEffort": "high",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "low": {
+              "reasoningEffort": "low",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "reasoningSummary": "auto",
+              "textVerbosity": "medium"
+            }
+          }
+        },
+        "gpt-5.6-luna": {
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "name": "gpt-5.6-luna",
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "cost": {
+            "input": 1,
+            "output": 6,
+            "cache_read": 0.1
+          },
+          "reasoning": true,
+          "tool_call": true,
           "variants": {
             "high": {
               "reasoningEffort": "high",

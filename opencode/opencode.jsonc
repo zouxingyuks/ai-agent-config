@@ -614,7 +614,7 @@
     "anthropic"
   ],
   "username": "xyuzou",
-  "small_model": "openai/gpt-5.3-codex-spark",
+  "small_model": "openai/gpt-5.6-luna",
   "permission": {
     // Baseline: unknown capabilities ask by default. Specific safe tools are allowed below.
     "shell": {

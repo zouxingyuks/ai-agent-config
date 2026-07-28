@@ -244,11 +244,6 @@
   "notification": {
     "force_enable": true
   },
-  "goal": {
-    "enabled": true,
-    "auto_start": false,
-    "default_max_iterations": 100
-  },
   "team_mode": {
     "enabled": true,
     "tmux_visualization": false,

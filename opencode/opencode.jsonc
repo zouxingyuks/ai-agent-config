@@ -500,18 +500,6 @@
       }
     }
   },
-  "agent": {
-    "build": {
-      "options": {
-        "store": false
-      }
-    },
-    "plan": {
-      "options": {
-        "store": false
-      }
-    }
-  },
   "compaction": {
     "auto": false,
     "prune": false

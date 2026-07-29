@@ -45,4 +45,5 @@ helm = "latest"
 "pipx:ruff" = "latest"
 
 "github:artifacthub/hub" = "latest"
+"npm:defuddle" = "latest"
 

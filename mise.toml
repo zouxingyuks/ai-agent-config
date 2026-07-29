@@ -1,8 +1,10 @@
 [tools]
 # Language runtimes used by agents and project scripts.
-python = ["3.9","3.10"]
+python = ["3.9", "3.10"]
 go = "1.23.10"
 node = "24.18.0"
+rust = "1.97.1"
+
 
 # CLI utilities commonly used by agents.
 uv = "latest"

@@ -273,10 +273,7 @@
   },
   "hashline_edit": true,
   "model_capabilities": {
-    "enabled": true,
-    "auto_refresh_on_start": true,
-    "refresh_timeout_ms": 5000,
-    "source_url": "https://models.dev/api.json"
+    "enabled": false
   },
   "codegraph": {
     "enabled": true,

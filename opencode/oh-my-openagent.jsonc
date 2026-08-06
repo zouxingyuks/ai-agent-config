@@ -236,6 +236,13 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     }
   },
+  "sisyphus_agent": {
+    "disabled": false,
+    "default_builder_enabled": false,
+    "planner_enabled": true,
+    "replace_plan": true,
+    "tdd": false
+  },
   "git_master": {
     "commit_footer": false,
     "include_co_authored_by": false,

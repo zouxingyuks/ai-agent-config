@@ -252,7 +252,7 @@
     "force_enable": true
   },
   "team_mode": {
-    "enabled": true,
+    "enabled": false,
     "tmux_visualization": false,
     "max_parallel_members": 4,
     "max_members": 8,

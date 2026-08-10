@@ -603,6 +603,7 @@
       "docker logs *": "allow",
       "docker images *": "allow",
       "git show *": "allow",
+      "git show-ref *": "allow",
       "git status *": "allow",
       "git remote -v": "allow",
       "git remote show *": "allow",
@@ -673,7 +674,9 @@
       "git branch -D *": "ask",
       "git rebase *": "ask",
       "git cherry-pick *": "ask",
+      "git add *": "allow",
       "git commit *": "allow",
+      "git mergse *": "allow",
       "git log *": "allow",
       "git switch *": "allow",
       "git ls-remote *": "allow",
@@ -704,10 +707,8 @@
       "sudo rm *": "deny",
       "ansible-playbook": "ask",
       "ansible-playbook --syntax-check *": "allow",
-
       "mise *": "ask",
       "mise ls *": "allow",
-
       "true": "allow"
     },
     "read": {

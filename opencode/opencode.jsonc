@@ -522,6 +522,7 @@
       "sort *": "allow",
       "diff *": "allow",
       "jq *": "allow",
+      "yq *": "allow",
       "echo *": "allow",
       "curl *": "allow",
       "go *": "allow",

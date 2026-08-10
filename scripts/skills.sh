@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Refresh the global skills index before installing pinned favorites.
-npx skills update -g
+npx skills update -g -y
 
 # Core discovery skill used to find and manage additional skills.
 npx skills add --agent opencode -g https://github.com/vercel-labs/skills --skill find-skills -y

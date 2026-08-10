@@ -93,9 +93,10 @@
     },
     "prometheus": {
       // 战略规划：澄清需求、验证计划、复杂任务分解，推荐内部plan而不是和用户直接交互
-      "model": "openai/gpt-5.6-sol",
+      "model": "openai/gpt-5.5",
       "variant": "high",
       "fallback_models": [
+        "openai/gpt-5.6-sol"
       ],
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     },
@@ -136,7 +137,12 @@
       "prompt_append": "必须严格遵守 AGENTS.md 的要求: \nfile://~/.config/opencode/AGENTS.md"
     }
   },
-  "agent_order": ["hephaestus", "sisyphus", "prometheus", "atlas"],
+  "agent_order": [
+    "hephaestus",
+    "sisyphus",
+    "prometheus",
+    "atlas"
+  ],
   "categories": {
     "visual-engineering": {
       // 视觉/前端/GUI：gpt-5.5 → gpt-5.6-terra → opus
@@ -223,7 +229,9 @@
     "replace_plan": true,
     "tdd": false
   },
-  "disabled_skills": ["git-master"],
+  "disabled_skills": [
+    "git-master"
+  ],
   "notification": {
     "force_enable": true
   },
@@ -282,5 +290,5 @@
     },
     "staleTimeoutMs": 180000,
     "maxToolCalls": 200
-  },
+  }
 }

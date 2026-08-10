@@ -677,6 +677,9 @@
       "git switch *": "allow",
       "git ls-remote *": "allow",
       "git worktree add *": "allow",
+      "git worktree list *": "allow",
+      "git worktree prune *": "allow",
+      "git check-ignore *": "allow",
       "git tag *": "allow",
       "git tag -d *": "deny",
       "git tag --delete *": "deny",
@@ -702,7 +705,9 @@
       "ansible-playbook --syntax-check *": "allow",
 
       "mise *": "ask",
-      "mise ls *": "allow"
+      "mise ls *": "allow",
+
+      "true": "allow"
     },
     "read": {
       "*": "allow",

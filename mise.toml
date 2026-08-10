@@ -4,7 +4,7 @@ minimum_release_age = "7d"
 [tools]
 # Language runtimes used by agents and project scripts.
 python = ["3.9", "3.10"]
-go = "1.23.10"
+go = "1.25.12"
 node = "24.18.0"
 rust = "1.97.1"
 
@@ -15,7 +15,6 @@ npm = "latest"
 ripgrep = "latest"
 jq = "latest"
 yq = "latest"
-github-cli = "latest"
 fd = "latest"
 ast-grep = "latest"
 gh = "latest"

@@ -203,10 +203,7 @@
         "gpt-5.5",
         "gpt-5.6-sol",
         "gpt-5.6-terra",
-        "gpt-5.6-luna",
-        "gpt-5.4-mini",
-        "gpt-5.3-codex",
-        "gpt-5.3-codex-spark"
+        "gpt-5.6-luna"
       ],
       "models": {
         "gpt-5.5": {
@@ -392,109 +389,6 @@
               "reasoningSummary": "auto",
               "textVerbosity": "medium"
             }
-          }
-        },
-        "gpt-5.4-mini": {
-          "limit": {
-            "context": 400000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "name": "gpt-5.4-mini",
-          "interleaved": {
-            "field": "reasoning_content"
-          },
-          "variants": {
-            "high": {
-              "reasoningEffort": "high",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "low": {
-              "reasoningEffort": "low",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "medium": {
-              "reasoningEffort": "medium",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "xhigh": {
-              "reasoningEffort": "xhigh",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            }
-          }
-        },
-        "gpt-5.3-codex": {
-          "limit": {
-            "context": 400000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "name": "gpt-5.3-codex",
-          "interleaved": {
-            "field": "reasoning_content"
-          },
-          "options": {
-            "include": [
-              "reasoning.encrypted_content"
-            ],
-            "store": false
-          },
-          "variants": {
-            "high": {
-              "reasoningEffort": "high",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "low": {
-              "reasoningEffort": "low",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "medium": {
-              "reasoningEffort": "medium",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "xhigh": {
-              "reasoningEffort": "xhigh",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            }
-          }
-        },
-        "gpt-5.3-codex-spark": {
-          "name": "gpt-5.3-codex-spark",
-          "limit": {
-            "context": 128000,
-            "output": 32000
-          },
-          "modalities": {
-            "input": [
-              "text"
-            ],
-            "output": [
-              "text"
-            ]
           }
         }
       }
@@ -778,9 +672,11 @@
       "git branch -D *": "ask",
       "git rebase *": "ask",
       "git cherry-pick *": "ask",
-      "git commit *": "ask",
+      "git commit *": "allow",
       "git log *": "allow",
+      "git switch *": "allow",
       "git tag *": "allow",
+      "git worktree add *": "allow",
       "git tag -d *": "deny",
       "git tag --delete *": "deny",
       "git for-each-ref *": "allow",
@@ -802,7 +698,10 @@
       "rm -rf *": "deny",
       "sudo rm *": "deny",
       "ansible-playbook": "ask",
-      "ansible-playbook --syntax-check *": "allow"
+      "ansible-playbook --syntax-check *": "allow",
+
+      "mise *": "ask",
+      "mise ls *": "allow"
     },
     "read": {
       "*": "allow",

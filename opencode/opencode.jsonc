@@ -568,6 +568,7 @@
       "gh pr status *": "allow",
       "gh pr checks *": "allow",
       "gh pr comment *": "allow",
+      "gh pr edit *": "allow",
       "gh issue create *": "allow",
       "gh issue view *": "allow",
       "gh issue list *": "allow",

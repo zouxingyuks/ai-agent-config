@@ -603,6 +603,8 @@
       "docker ps *": "allow",
       "docker logs *": "allow",
       "docker images *": "allow",
+      "docker manifest inspect *" : "allow",
+      "docker build *": "allow",
       "git show *": "allow",
       "git show-ref *": "allow",
       "git status *": "allow",
@@ -613,6 +615,7 @@
       "git branch -vv": "allow",
       "git branch --show-current *": "allow",
       "git branch --list *": "allow",
+      "git reset *": "allow",
       "git diff *": "allow",
       "git fetch *": "allow",
       "base64 -d": "allow",
@@ -821,7 +824,9 @@
       "*": "ask",
       "/tmp/**": "allow",
       "~/.config/opencode/**": "allow",
-      "~/.agents/skills/**": "allow"
+      "~/.agents/skills/**": "allow",
+      "~/.cache/oh-my-opencode/**": "allow",
+      "/tmp/opencode/**": "allow"
     }
   },
   "formatter": {

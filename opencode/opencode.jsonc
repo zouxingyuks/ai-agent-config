@@ -688,6 +688,7 @@
       "git worktree list *": "allow",
       "git worktree prune *": "allow",
       "git check-ignore *": "allow",
+      "git apply *": "allow",
       "git tag *": "allow",
       "git tag -d *": "deny",
       "git tag --delete *": "deny",
@@ -713,7 +714,8 @@
       "ansible-playbook --syntax-check *": "allow",
       "mise *": "ask",
       "mise ls *": "allow",
-      "true": "allow"
+      "true": "allow",
+      "command -v *": "allow"
     },
     "read": {
       "*": "allow",

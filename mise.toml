@@ -50,3 +50,5 @@ helm = "latest"
 "github:artifacthub/hub" = "latest"
 "npm:defuddle" = "latest"
 
+"github:anomalyco/opencode" = "1.18.16"
+

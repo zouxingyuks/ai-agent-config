@@ -825,6 +825,7 @@
       "git worktree add *": "allow",
       "base64 -d": "allow",
       "nl -ba": "allow",
+      "xargs *": "allow",
       // opencode related commands.
       "opencode --version": "allow",
       "opencode models": "allow",

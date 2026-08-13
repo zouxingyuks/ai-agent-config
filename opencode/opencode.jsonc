@@ -819,6 +819,10 @@
       "git update-index *": "deny",
       "git read-tree": "deny",
       "git read-tree *": "deny",
+      // In addition to the read‑only Git commands mentioned above, the following commands are also allowed.
+      "git add *": "allow",
+      "git checkout *": "allow",
+      "git worktree add *": "allow",
       "base64 -d": "allow",
       "nl -ba": "allow",
       // opencode related commands.

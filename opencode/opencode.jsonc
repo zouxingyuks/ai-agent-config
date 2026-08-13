@@ -718,7 +718,8 @@
       "mise ls *": "allow",
       "true": "allow",
       "command -v *": "allow",
-      "gcx login *": "deny"
+      "gcx login *": "deny",
+      "golangci-lint *": "allow"
     },
     "read": {
       "*": "allow",

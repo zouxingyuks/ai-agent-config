@@ -1069,6 +1069,8 @@
       "~/.config/opencode/**": "allow",
       "~/.agents/skills/**": "allow",
       "~/.cache/oh-my-opencode/**": "allow",
+      "~/.cache/oh-my-openagent/**": "allow",
+      "~/.cache/opencode/**": "allow",
       "/tmp/opencode/**": "allow"
     }
   },
@@ -1107,5 +1109,6 @@
         ".md"
       ]
     }
-  }
+  },
+  "retry": {}
 }

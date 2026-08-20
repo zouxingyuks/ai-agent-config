@@ -230,7 +230,9 @@
     "tdd": false
   },
   "disabled_skills": [
-    "git-master"
+    "git-master",
+    "programming",
+    "team-mode"
   ],
   "notification": {
     "force_enable": true

@@ -53,3 +53,5 @@ helm = "latest"
 "github:anomalyco/opencode" = "1.18.16"
 "go:github.com/grafana/gcx/cmd/gcx" = "latest"
 
+kubectl = "latest"
+

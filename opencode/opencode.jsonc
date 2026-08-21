@@ -829,6 +829,7 @@
       "git add *": "allow",
       "git checkout *": "allow",
       "git worktree add *": "allow",
+      "gh issue create *": "allow",
       "gh issue edit *": "allow",
       "base64 -d": "allow",
       "nl -ba": "allow",

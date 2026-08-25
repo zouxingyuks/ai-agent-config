@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ranxianglei/opencode-acp/master/dcp.schema.json",
+  // Enable or disable the plugin
+  "enabled": true,
+  // Automatically update npm-installed ACP when a newer version is available
+  // on the installed dist-tag/spec (@stable follows stable, @latest follows latest).
+  // Version-locked plugin specs are not updated.
+  "autoUpdate": true,
+  // Enable full DEBUG logging + per-request snapshots (overrides logLevel)
+  "debug": false
+}

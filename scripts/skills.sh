@@ -41,15 +41,15 @@ npx skills ls --agent opencode -g -y
 
 # MongoDB
 
-gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-schema-design
-gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-connection
-gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-query-optimizer
+gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-schema-design -y
+gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-connection -y
+gh skill install --scope user --agent opencode https://github.com/mongodb/agent-skills mongodb-query-optimizer -y
 
 # Redis
-gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-connections
-gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-clustering
-gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-core
-gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-search
+gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-connections -y
+gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-clustering -y
+gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-core -y
+gh skill install --scope user --agent opencode https://github.com/redis/agent-skills redis-search -y
 
 npx skills add --agent opencode -g https://github.com/kepano/obsidian-skills.git -y
 

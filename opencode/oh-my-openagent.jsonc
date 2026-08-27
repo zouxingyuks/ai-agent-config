@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/tags/v4.19.2/assets/oh-my-opencode.schema.json",
   "agents": {
     // ======================
     // 1. 编排规划与验证系列
@@ -242,6 +242,11 @@
   },
   "browser_automation_engine": {
     "provider": "playwright-cli"
+  },
+  "goal": {
+    "enabled": false,
+    "auto_start":false,
+    "default_max_iterations": 100
   },
   "telemetry": false,
   "background_task": {

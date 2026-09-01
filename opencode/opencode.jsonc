@@ -805,6 +805,7 @@
       "git read-tree *": "deny",
       // In addition to the read‑only Git commands mentioned above, the following commands are also allowed.
       "git add *": "allow",
+      "git commit *": "allow",
       "git apply *": "allow",
       "git checkout *": "allow",
       "git worktree add *": "allow",

@@ -545,6 +545,7 @@
       "echo *": "allow",
       "curl *": "allow",
       "go *": "allow",
+      "go1.25.12 *": "allow",
       "gofmt *": "allow",
       "pnpm run *": "allow",
       "npm list *": "allow",
@@ -566,6 +567,7 @@
       // Auth status is allowed only without token-printing flags.
       "gh auth status": "allow",
       "gh auth status --json hosts": "allow",
+      "gh api user --jq .login": "allow",
       // Common read-only GitHub CLI commands.
       "gh search code *": "allow",
       "gh search commits *": "allow",
@@ -744,9 +746,12 @@
       "kubectl get *": "allow",
       "kubectl describe *": "allow",
       "kubectl logs *": "allow",
+      "docker compose ps *": "allow",
+      "docker compose logs *": "allow",
       "docker ps *": "allow",
       "docker logs *": "allow",
       "docker images *": "allow",
+      "docker inspect *": "allow",
       "docker manifest inspect *": "allow",
       "docker build *": "allow",
       // Git defaults to ask; read-only discovery is allowed, destructive force/delete paths are denied later.
